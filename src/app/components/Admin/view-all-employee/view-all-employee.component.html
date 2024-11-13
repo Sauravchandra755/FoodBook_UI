@@ -1,0 +1,37 @@
+
+
+<div class="container">
+    <br />
+    <h1>All Employees</h1>
+    <br />
+    <button class="btn btn-primary"  routerLink="/addemployee">Add Employee</button>
+    
+    <table class="table tablestyle">    
+        <thead>
+            <tr>                             
+                <th>MId</th>
+                <th>EmployeeName</th>
+                <th>DailyCredits</th>
+                <th>UpdatedCreditsDate</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>IsActive</th>
+                <th></th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employee">
+                <td>{{emp.mId}}</td>
+                <td>{{emp.employeeName}}</td>
+                <td>{{emp.dailyCredits}}</td>
+                <td>{{emp.updatedCreditsDate}}</td>
+                <td>{{emp.email}}</td>
+                <td>{{emp.role}}</td>
+                <td>{{emp.isActive}}</td>
+                <td><button class="btn btn-primary" [routerLink]="['/editemployee/' + emp.empId]"  >Edit</button></td>
+
+                
+            </tr>
+        </tbody>
+    </table>

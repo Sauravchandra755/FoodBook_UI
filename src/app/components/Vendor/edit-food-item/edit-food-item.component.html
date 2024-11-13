@@ -1,0 +1,45 @@
+<p>edit-food-item works!</p>
+
+<h1 style="text-align: center;">Update Food</h1>
+<form class="formcontent" #form="ngForm" novalidate (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label class="form-label">foodName</label>
+      <input type="text" class="form-control" name="foodName" 
+      #foodName="ngModel" [(ngModel)] = "updateitem.foodName"
+      required [class.changed]="foodName.invalid || foodName.dirty">
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">foodDescription</label>
+        <input type="text" class="form-control" name="foodDescription" 
+        #foodDescription="ngModel" [(ngModel)] = "updateitem.foodDescription"
+        required [class.changed]="foodDescription.invalid || foodDescription.dirty">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">foodCatagory</label>
+        <textarea class="form-control" name="foodCatagory" 
+        #foodCatagory="ngModel" [(ngModel)] = "updateitem.foodCatagory"
+        required [class.changed]="foodCatagory.invalid || foodCatagory.dirty"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Price</label>
+        <input type="number" class="form-control" name="price" 
+        #price="ngModel" [(ngModel)] = "updateitem.price"
+        required [class.changed]="price.invalid || price.dirty" min="1">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">stock</label>
+        <input type="number" class="form-control" name="stock" 
+        #stock="ngModel" [(ngModel)] = "updateitem.stock"
+        required [class.changed]="stock.invalid || stock.dirty" min="1">
+      </div>
+      <br />
+    <div class="md-3">
+        <button type="submit" class="btn btn btn-success btn-lg" style=" float:right" [disabled]="form.invalid">
+           Update
+            </button>
+    </div>
+  </form>

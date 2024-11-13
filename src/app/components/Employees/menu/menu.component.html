@@ -1,0 +1,47 @@
+<div class="container ">
+  <br />
+  <div class="row ">
+    <div class="card" style="width: 18rem;" *ngFor="let item of food">
+      <img src= {{item.image}} class="card-img-top" >
+      <div class="card-body">
+        <h5 class="card-title">{{item.foodName}}</h5>
+        <p class="card-text">{{item.foodDescription}}</p>
+        <div class="product-bottom-details">
+          <div class="product-price"> &#x20b9;{{item.price}}</div>
+          <div class="product-link">
+            <a (click)="openModal(item.foodId)" class="btn btn-primary">order</a>  
+          </div>
+        </div>      
+             
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="setquantity" tabindex="-1" aria-labelledby="quantity" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="quantity">Select Quantity</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">        
+        <div class="col-sm-8 mb-3">
+          <div class="form-check-inline">
+            <button class="btn circleminus" (click)="minus()"><i class="bi bi-plus"></i></button>
+          </div>
+          <div class="form-check-inline">
+            <input type="text" class="form-control" [(ngModel)]="inputnumber">
+          </div>
+          <div class="form-check-inline ">
+            <button class="btn circle" (click)="plus()"><i class="bi bi-minus"></i></button>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="placeOrder()">Order</button>
+      </div>
+    </div>
+  </div>
+</div>

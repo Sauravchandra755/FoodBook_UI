@@ -1,0 +1,37 @@
+
+<div class="container">
+    <br />
+    <h1>All Orders</h1>
+    <div clas="wapper">
+
+    
+    <table class="table tablestyle">    
+        <thead>
+            <tr>
+                <th>OrderId </th>                                
+                <th>Employee Name</th>
+                <th>Food Name</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Order DateTimed</th>
+                <th>Order Status</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ord of orders">
+                <td>{{ord.orderId}}</td>
+                <!-- <td>{{ord.id}}</td> -->
+                <td>{{ord.employee.employeeName}}</td>
+                <!-- <td>{{ord.foodId}}</td> -->
+                <td>{{ord.food.foodName}}</td>
+                <td>{{ord.quantity}}</td>
+                <td>{{ord.totalPrice}}</td>
+                <td>{{ord.orderDateTime | date}}</td>
+                <td>{{ord.orderStatus}}</td>
+
+                
+            </tr>
+        </tbody>
+    </table>
+</div>

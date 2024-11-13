@@ -1,0 +1,45 @@
+
+<div class="container">
+    <br />
+    <h1 style="text-align: center;">Update Employee</h1>
+    <form  class="formcontent" #form="ngForm" novalidate (ngSubmit)="onSubmit()">        
+
+        <div class="form-group">
+            <label class="form-label">MId</label>
+            <input type="text" class="form-control" name="MId" 
+            #MId="ngModel" [(ngModel)] = "updateEmp.mId"
+            required [class.changed]="MId.dirty" [class.invalid]="MId.invalid">
+        </div>
+
+          <div class="form-group">
+            <label class="form-label">EmployeeName</label>
+            <input type="text" class="form-control" name="EmployeeName" 
+            #EmployeeName="ngModel" [(ngModel)] = "updateEmp.employeeName"
+            required [class.changed]="EmployeeName.dirty" [class.invalid]="EmployeeName.invalid">
+          </div>
+          <div class="form-group">
+            <label class="form-label">DailyCredits</label>
+            <input type="number" class="form-control" name="DailyCredits" 
+            #DailyCredits="ngModel" [(ngModel)] = "updateEmp.dailyCredits"
+            required [class.changed]="DailyCredits.dirty" [class.invalid]="DailyCredits.invalid" min="1">
+          </div>         
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" name="Email" 
+            #Email="ngModel" [(ngModel)] = "updateEmp.email"
+            required [class.changed]="Email.dirty" [class.invalid]="Email.invalid" min="1">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Role</label>
+            <input type="text" class="form-control" name="Role" 
+            #Role="ngModel" [(ngModel)] = "updateEmp.role"
+            required [class.changed]="Role.dirty" [class.invalid]="Role.invalid" min="1">
+          </div>       
+          <br />
+        <div class="md-3">
+            <button type="submit" class="btn btn btn-success btn-lg" style=" float:right"[disabled]="form.invalid">
+                Update
+             </button>                       
+        </div>
+      </form>
+</div>

@@ -1,0 +1,9 @@
+<!-- <h2 *ngIf="isLoggedIn()">Welcome {{getName()}}</h2> -->
+<button class="btn btn-primary" (click)="login()" *ngIf="!isLoggedIn()">Log in</button>
+<button class="btn btnlogout" (click)="logout()" *ngIf="isLoggedIn()">Log out</button>
+
+<!--<app-employee *ngIf="isLoggedIn() && userRole =='employee'"></app-employee> -->
+
+<app-home *ngIf="isLoggedIn()"></app-home>
+
+<!-- <router-outlet></router-outlet> -->

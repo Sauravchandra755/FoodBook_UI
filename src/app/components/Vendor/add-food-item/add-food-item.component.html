@@ -1,0 +1,54 @@
+<p>add-food-item works!</p>
+
+<div class="container" >
+    <br />
+    <h1 style="text-align: center;">Add Food</h1>
+    <form class="formcontent" #form="ngForm" novalidate (ngSubmit)="onSubmit()">        
+
+        <div class="form-group">
+            <label class="form-label">Food Name</label>
+            <input type="text" #file class="form-control" name="FoodName" 
+            #FoodName="ngModel" [(ngModel)] = "food.foodName"
+            required [class.changed]="FoodName.dirty" [class.invalid]="FoodName.invalid">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">FoodDescription</label>
+            <textarea class="form-control" name="description" 
+            #description="ngModel" [(ngModel)] = "food.foodDescription"
+            required [class.changed]="description.dirty" [class.invalid]="description.invalid"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">FoodCatagory</label>
+            <input class="form-control" name="FoodCatagory" 
+            #FoodCatagory="ngModel" [(ngModel)] = "food.foodCatagory"
+            required [class.changed]="FoodCatagory.dirty" [class.invalid]="FoodCatagory.invalid">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Image</label>
+            <input type="file" class="form-control" name="Image" 
+            #Image="ngModel" [(ngModel)] = "food.image"
+            required [class.changed]="Image.dirty" [class.invalid]="Image.invalid" min="1">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Price</label>
+            <input type="number" class="form-control" name="Price" 
+            #Price="ngModel" [(ngModel)] = "food.price"
+            required [class.changed]="Price.dirty" [class.invalid]="Price.invalid" min="1">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Stock</label>
+            <input type="number" class="form-control" name="Stock" 
+            #Stock="ngModel" [(ngModel)] = "food.stock"
+            required [class.changed]="Stock.dirty" [class.invalid]="Stock.invalid" min="1">
+          </div>
+          <br />
+        <div class="md-3">
+            <button type="submit" class="btn btn btn-success btn-lg" style=" float:right" [disabled]="form.invalid">
+                Add
+             </button>                       
+        </div>
+      </form>
+</div>

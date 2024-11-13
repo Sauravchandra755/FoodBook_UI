@@ -1,0 +1,36 @@
+
+<div class="container">
+  <br />
+  <h1>All Food Items</h1>
+  <br />
+  <button class="btn btn-primary" [routerLink]="['/addfooditem/']">Add Food Item</button>
+  <br />
+
+<div class="wapper">
+
+
+<table class="table tablestyle">
+    <thead>
+      <tr>
+        <th scope="col" style="width:200px;">Name</th>
+        <th scope="col">Discription</th>
+        <th scope="col">Category</th>
+        <th scope="col">Price</th>
+        <th scope="col">Stock</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of allItems">
+      <tr>
+        <td>{{item.foodName}}</td>
+        <td>{{item.foodDescription}}</td>
+        <td>{{item.foodCatagory}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.stock}}</td>
+        <td><button class="btn btn-primary btncenter" [routerLink]="['/editfooditem/'+ item.foodId]">Edit</button></td>
+      </tr>
+      
+
+    </tbody>
+  </table>
+</div>

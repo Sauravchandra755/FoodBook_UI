@@ -1,0 +1,216 @@
+/*Product Card*/ 
+
+.card {
+
+    width: 300px;
+    
+     box-shadow: 0 2px 7px #dfdfdf;
+    margin-top:22px;
+     margin-left: 20px;
+    
+     background: #fafafa;
+    
+    }
+    
+    
+    
+    
+    
+    .product-tumb {
+    
+     display:flex;
+    
+     text-align: justify;
+    
+     height: 235px;
+    
+    width: 275px;
+    
+     background: #f0f0f0;
+    
+    }
+    
+    
+    
+    
+    .product-tumb img {
+     
+        width:275px;
+        height:235px;
+        }
+    
+    
+    
+    
+    .product-details {
+    
+   padding: 15px;
+    
+    }
+    
+    
+    
+    
+    .product-catagory {
+    
+     display: block;
+    
+    font-size: 12px;
+    
+    font-weight: 700;
+    
+    text-transform: uppercase;
+    
+     color: #0a0a0a;
+    
+     margin-bottom:5px;
+    
+    }
+    
+    
+    
+    
+    
+    
+    .product-details p {
+    
+     font-size: 15px;
+    
+     line-height: 22px;
+    
+    margin-bottom: 18px;
+    
+     color: #999;
+    
+    }
+    
+    
+    
+    
+    .product-bottom-details {
+    
+     overflow: hidden;
+    
+     border-top: 1px solid #eee;
+    
+     padding-top: 20px;
+    
+    }
+    
+    
+    
+    
+    .product-bottom-details div {
+    
+     float: left;
+    
+     width: 50%;
+    
+    }
+    
+    
+    
+    
+    .product-price {
+    
+     font-size: 18px;
+    
+     font-weight: 600;
+    
+    }
+
+    .product-link
+    {
+        text-align: right;
+    }
+    
+    
+    
+    
+    
+    .orderbtn
+    
+    {
+    
+     width: 60px;
+    
+    height: 30px;
+    
+    border-radius: 10px;
+    
+    background-color: #2b59b5;
+    
+    position: relative;
+    
+     overflow: hidden;
+    
+     border: none;
+    
+     cursor: pointer;
+    
+     color:#fafafa;
+    
+    }
+
+ .container
+ {
+    margin:auto;
+    width:80%;
+    padding:20px;
+ }
+
+ .circle {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(44, 108, 128);
+    position: relative;
+    }
+    .circle::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    height:4px;
+    margin-top: -5px;
+    top: 60%;
+    left: 5px;
+    right: 5px;
+    z-index:9;
+    }
+    .circle::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    width: 4px;
+    margin-left: -5px;
+    left: 63%;
+    top: 5px;
+    bottom: 5px;
+    z-index: 9;
+    } 
+
+
+   .circleminus
+   {
+   border-radius: 50%;
+   width: 20px;
+   height: 20px;
+   background-color: rgb(44, 108, 128);
+   position: relative;
+   overflow:hidden;
+   }
+   .circleminus::after {
+   content: " ";
+   position: absolute;
+   display: block;
+   background-color: #fff;
+   height:4px;
+   margin-top: -5px;
+   top: 63%;
+   left: 5px;
+   right: 5px;
+   z-index:9;
+   }
+ 

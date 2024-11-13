@@ -1,0 +1,12 @@
+
+.formcontent
+{
+ border-radius: 10px 10px 10px 10px;
+ background: #fff;
+ padding: 30px;
+ width: 65%;
+ margin:auto;
+ box-shadow: 0 10px 20px 0 rgba(111, 110, 110, 0.3);
+ text-align: left;
+ overflow:hidden;
+}

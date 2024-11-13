@@ -1,0 +1,45 @@
+
+
+<div class="container" >
+    <br />
+    <h1 style="text-align: center;">Add Employee</h1>
+    <form class="formcontent" #form="ngForm" novalidate (ngSubmit)="onSubmit()">        
+
+        <div class="form-group">
+            <label class="form-label">MId</label>
+            <input type="text" class="form-control" name="FoodName" 
+            #FoodName="ngModel" [(ngModel)] = "employee.mId"
+            required [class.changed]="FoodName.dirty" [class.invalid]="FoodName.invalid">
+          </div>
+          <div class="form-group">
+            <label class="form-label">EmployeeName</label>
+            <input type="text" class="form-control" name="EmployeeName" 
+            #EmployeeName="ngModel" [(ngModel)] = "employee.employeeName"
+            required [class.changed]="EmployeeName.dirty" [class.invalid]="EmployeeName.invalid">
+          </div>
+          <div class="form-group">
+            <label class="form-label">DailyCredits</label>
+            <input type="number" class="form-control" name="DailyCredits" 
+            #DailyCredits="ngModel" [(ngModel)] = "employee.dailyCredits"
+            required [class.changed]="DailyCredits.dirty" [class.invalid]="DailyCredits.invalid" min="1">
+          </div>      
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" name="Email" 
+            #Email="ngModel" [(ngModel)] = "employee.email"
+            required [class.changed]="Email.dirty" [class.invalid]="Email.invalid" min="1">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Role</label>
+            <input type="text" class="form-control" name="Role" 
+            #Role="ngModel" [(ngModel)] = "employee.role"
+            required [class.changed]="Role.dirty" [class.invalid]="Role.invalid" min="1">
+          </div>
+          <br />
+        <div class="md-3">
+            <button type="submit" class="btn btn btn-success btn-lg" style=" float:right" [disabled]="form.invalid">
+                Add
+             </button>                       
+        </div>
+      </form>
+</div>

@@ -1,0 +1,9 @@
+<h2 *ngIf="isLoggedIn()">Welcome {{getName()}}</h2>
+<div *ngIf="isLoggedIn()">
+    <app-employee *ngIf="employeeService.currentUser.value.role.toLowerCase() =='employee'"></app-employee>
+    <app-vendor-home *ngIf="employeeService.currentUser.value.role.toLowerCase() =='vendor'"></app-vendor-home>
+    <app-admin-home *ngIf="employeeService.currentUser.value.role.toLowerCase() =='admin'"></app-admin-home>
+</div>
+
+
+<router-outlet></router-outlet>

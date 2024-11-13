@@ -1,0 +1,20 @@
+<div class="wapper">
+<table class="table tablestyle" >
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Discription</th>
+        <th scope="col" style="width:200px;">Order Date</th>
+      </tr>
+     
+    </thead>
+    <tbody *ngFor="let item of allOrders">
+      <tr>
+        <td>{{item.food.foodName}}</td>
+        <td>{{item.food.foodDescription}}</td>
+        <td>{{item.orderDateTime | date}}</td>
+      </tr>
+   
+    </tbody>
+  </table>
+</div>
