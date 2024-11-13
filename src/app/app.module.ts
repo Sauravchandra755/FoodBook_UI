@@ -27,15 +27,7 @@ export function loggerCallback(logLevel: LogLevel, message: string) {
   console.log(message);
 }
 
-export function MSALInstanceFactory():IPublicClientApplication{
-  return new PublicClientApplication({
-    auth: {
-      clientId: 'e533f57b-7fc3-4966-aca0-e9809038c09c',
-      authority: 'https://login.microsoftonline.com/85c997b9-f494-46b3-a11d-772983cf6f11',
-      redirectUri: 'http://localhost:4200',
-    }
-  })
-}
+
 
 @NgModule({
   declarations: [
